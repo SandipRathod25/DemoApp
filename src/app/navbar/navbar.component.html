@@ -1,0 +1,81 @@
+<div class="nav">
+    <div class="nav-content">
+        <div class="menubar">
+            <img src="../../assets/Assets/menu.png" alt="" *ngIf="menuBar===false" (click)="toggleMenu()">
+            <img src="../../assets/Assets/close.png" alt="" *ngIf="menuBar===true" (click)="toggleMenu()">
+        </div>
+        <div class="nav-left">
+            <img src="../../assets/Assets/logo.svg" alt="">
+        </div>
+        <div class="nav-right hide" *ngIf="menuBar===true">
+            <P>HOME</P>
+            <P (click)="togglePopUp()">DISCOVERY</P>
+            <P>PHOTO</P>
+            <P>CONTACT</P>
+        </div>
+        <div class="nav-right hiding">
+            <P>HOME</P>
+            <P (click)="togglePopUp()">DISCOVERY</P>
+            <P>PHOTO</P>
+            <P>CONTACT</P>
+        </div>
+        <div class="user">
+            <img src="../../assets/Assets/campbell.avif" alt="">
+        </div>
+    </div>
+    <div class="popup" *ngIf="popup===true">
+        <div class=" popup-content">
+            <div class="pop-top">
+                <div class="texts">
+                    <p class="bold">Sports</p>
+                    <p>Volleyball</p>
+                    <p>Basketball</p>
+                    <p>Tennis</p>
+                    <p>Swimming</p>
+                </div>
+                <div class="texts">
+                    <p class="bold">Leisure</p>
+                    <p>Forrest Track</p>
+                    <p>Tai Chi</p>
+                    <p>Shopping</p>
+                    <p>Picnic</p>
+                </div>
+                <div class="texts">
+                    <p class="bold">Extreme</p>
+                    <p>Rock Climbing</p>
+                    <p>Paracuting</p>
+                    <p>Bunglee Jumping</p>
+                    <p>Sky Diving</p>
+                </div>
+                <div class="texts">
+                    <p class="bold">Kids</p>
+                    <p>House Riding</p>
+                    <p>Bird Watching</p>
+                    <p>Art & Craft</p>
+                    <p>Tag</p>
+                </div>
+                <div class="texts">
+                    <p class="bold">Elderly</p>
+                    <p>Walk For A Cause</p>
+                    <p>Senior Fitness</p>
+                    <p>Arts Workshop</p>
+                    <p>Disco</p>
+                </div>
+            </div>
+            <div class="pop-center"></div>
+            <div class="pop-bottom">
+                <div class="contact">
+                    <p>If you are interested in reserving tickets for special events, <span
+                            style="font-weight: bold;">please contact us.</span>
+                    </p>
+                </div>
+                <div class="social">
+                    <img src="../../assets/Assets/instagram.png" alt="">
+                    <img src="../../assets/Assets/twitter.png" alt="">
+                    <img src="../../assets/Assets/facebook.png" alt="">
+                    <img src="../../assets/Assets/earth.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

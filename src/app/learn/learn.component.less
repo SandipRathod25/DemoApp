@@ -1,0 +1,73 @@
+.learn {
+    width: 100%;
+    background-color: #F6F8F9;
+
+    .learn-content {
+        width: 80%;
+        margin: 0 auto;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .image {
+                img {
+                    width: 100%;
+
+                    &:hover {
+                        box-shadow: 0px 0px 6px 6px rgb(158, 154, 154);
+                        cursor: pointer;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .content {
+                font-family: Helvetica, sans-serif;
+                padding-top: 10px;
+
+                :nth-child(1) {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+
+                :nth-child(2) {
+                    color: #A6ADB4;
+                    max-width: 300px;
+                    padding-top: 10px;
+                }
+            }
+
+            .learn {
+                color: #FA6980;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-top: 10px;
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                    filter: invert(50%) sepia(13%) saturate(3207%) hue-rotate(-30deg) brightness(95%) contrast(80%);
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .learn-content {
+        width: 90% !important;
+        flex-direction: column;
+
+        .content {
+            padding: 20px 0;
+        }
+    }
+}

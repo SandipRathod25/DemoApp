@@ -1,0 +1,39 @@
+<div class="trending">
+    <div class="trending-content">
+        <div class="top">
+            <div class="left">
+                <p>TRENDING</p>
+            </div>
+            <div class="right">
+                <div class="arrows">
+                    <div class="first-img" (click)="slickModal.slickPrev()">
+                        <img src="../../assets/Assets/back.png" alt="">
+                    </div>
+                    <div class="second-img" (click)="slickModal.slickNext()">
+                        <img src="../../assets/Assets/front.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let slide of slides">
+                <div class="bottom">
+                    <div class="images">
+                        <div class="slider">
+                            <img src={{slide.img}}>
+                        </div>
+                        <div class="first">
+                            <p class="two">Dolore magna aliqua</p>
+                            <p class="three">Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…
+                            </p>
+                            <div class="logo">
+                                <img src="../../assets/Assets/clock.png" alt="">
+                                <p>2m ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="news">
+    <div class="news-content">
+        <div class="news-left">
+            <div class="images">
+                <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+                    <div ngxSlickItem *ngFor="let slide of slides">
+                        <img src={{slide.img}}>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+            <div class="cont">
+                <div class="world">
+                    <p>WORLD NEWS</p>
+                </div>
+                <div class="line"></div>
+                <div class="amazing">
+                    <p>Amazing places in America to visit.</p>
+                </div>
+                <div class="reason">
+                    <p>For some reason — this country, this city, this neighborhood, this particular street —  is the
+                        place you are living a majority of your life in.</p>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                    <button>DEFAULT BUTTON</button>
+                </div>
+            </div>
+            <div class="arrows hiding">
+                <div class="first-img" (click)="slickModal.slickNext()">
+                    <img src="../../assets/Assets/front.png" alt="">
+                </div>
+                <div class="second-img" (click)="slickModal.slickPrev()">
+                    <img src="../../assets/Assets/back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="news-right">
+            <div class="more">
+                <div class="more-text">
+                    MORE NEWS
+                </div>
+                <div class="arrows">
+                    <div class="first-img" (click)="prev()">
+                        <img src="../../assets/Assets/back.png" alt="">
+                    </div>
+                    <div class="second-img" (click)="next()">
+                        <img src="../../assets/Assets/front.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="first">
+                <p class="one">TRAVEL</p>
+                <p class="two">Subtitle</p>
+                <p class="three">{{currentNews}}</p>
+                <div class="logo">
+                    <img src="../../assets/Assets/clock.png" alt="">
+                    <p>{{currentTime}}</p>
+                </div>
+            </div>
+            <div class="first">
+                <p class="one">TECHNOLOGY</p>
+                <p class="two">Article title</p>
+                <p class="three">{{currentNews}}</p>
+                <div class="logo">
+                    <img src="../../assets/Assets/clock.png" alt="">
+                    <p>{{currentTime}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
